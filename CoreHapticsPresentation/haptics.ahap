@@ -1,0 +1,62 @@
+{
+    "Version": 1,
+    "Metadata":
+        {
+            "Project" : "Haptic Example",
+            "Created" : "12 May 2021",
+            "Description" : "A sequence of haptic events paired with a custom audio file."
+        },
+    "Pattern":
+    [
+        {
+           "Event":
+           {
+              "EventType":"HapticTransient",
+              "EventParameters":
+              [
+                 {
+                    "ParameterID":"HapticIntensity",
+                    "ParameterValue":0.6
+                 },
+                 {
+                    "ParameterID":"HapticSharpness",
+                    "ParameterValue":1
+                 }
+              ],
+              "Time":0.1
+           }
+        },
+        {
+           "Event":{
+              "EventType":"HapticTransient",
+              "EventParameters":
+              [
+                 {
+                    "ParameterID":"HapticIntensity",
+                    "ParameterValue":0.95
+                 },
+                 {
+                    "ParameterID":"HapticSharpness",
+                    "ParameterValue":1
+                 }
+              ],
+              "Time":0.184
+           }
+        },
+        {
+            "Event":
+            {
+                "Time":0,
+                "EventType":"AudioCustom",
+                "EventWaveformPath":"audio.wav",
+                "EventParameters":
+                [
+                    {
+                        "ParameterID":"AudioVolume",
+                        "ParameterValue":0.75
+                    }
+                ]
+            }
+        }
+    ]
+}
